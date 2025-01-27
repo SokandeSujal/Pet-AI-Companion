@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet AI Companion</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Hero Section with Video Background -->
+    <section id="hero">
+      <div class="video-container">
+        <video autoplay loop muted>
+          <source src="background-video.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h1>Pet AI Companion</h1>
+        <p>Your Smart Companion for Pet Health & Care</p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🐶</div>
+            <h3>Enter Pet Details</h3>
+            <p>Provide basic information about your beloved pet.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🩺</div>
+            <h3>Describe Concerns</h3>
+            <p>Share any specific health or care concerns.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h3>AI Insights</h3>
+            <p>Receive personalized, AI-generated health advice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pet Info Section -->
+    <section id="pet-info-section">
+      <div class="container">
+        <div class="pet-form-wrapper">
+          <h2>Get AI Pet Care Advice</h2>
+          <form id="pet-info-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="pet_name"
+                  >Type of Pet (eg: Cat, Dog, Parrot, etc.)</label
+                >
+                <input
+                  type="text"
+                  id="pet_name"
+                  name="pet_name"
+                  required
+                  placeholder="Enter your pet's name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="pet_breed">Pet Breed (Optional)</label>
+                <input
+                  type="text"
+                  id="pet_breed"
+                  name="pet_breed"
+                  placeholder="What breed is your pet?"
+                />
+              </div>
+              <div class="form-group">
+                <label for="pet_age">Pet Age in years (Optional)</label>
+                <input
+                  type="number"
+                  id="pet_age"
+                  name="pet_age"
+                  min="0"
+                  max="30"
+                  placeholder="How old is your pet?"
+                />
+              </div>
+              <div class="form-group full-width">
+                <label for="pet_issue">Pet Concern</label>
+                <textarea
+                  id="pet_issue"
+                  name="pet_issue"
+                  rows="4"
+                  placeholder="Describe any specific health symptoms, behaviors, or concerns you've noticed with your pet, or anything else."
+                ></textarea>
+              </div>
+            </div>
+            <button type="submit">Generate Pet Care Advice</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Response Section -->
+    <section id="response-section">
+      <div class="container">
+        <div id="response-container" class="response-container">
+          <div
+            id="loading-indicator"
+            class="loading-indicator"
+            style="display: none"
+          >
+            Generating AI Pet Care Insights... 🐾
+          </div>
+          <div id="ai-response" class="markdown-body"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Pet AI Companion. All Rights Reserved - Sujal Sokande</p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.2/marked.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
